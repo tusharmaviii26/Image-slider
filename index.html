@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore the World – Image Slider</title>
 
-    <!-- PREMIUM GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
     <style>
-        /* ============================================
-           ★★★  SKY BLUE TRANSPARENT GLASS THEME  ★★★
-           ============================================ */
         * {
             margin: 0;
             padding: 0;
@@ -104,9 +98,6 @@
             z-index: 1;
         }
 
-        /* ============================================
-           ★★★  HEADER  ★★★
-           ============================================ */
         .header {
             text-align: center;
             margin-bottom: 10px;
@@ -195,9 +186,6 @@
             color: rgba(2, 132, 199, 0.6);
         }
 
-        /* ============================================
-           ★★★  CAROUSEL  ★★★
-           ============================================ */
         .carousel-container {
             position: relative;
             padding: 14px 4px 28px;
@@ -931,9 +919,6 @@
             }
         }
 
-        /* ============================================
-           ★★★  RESPONSIVE  ★★★
-           ============================================ */
         @media (max-width: 1024px) {
             .swiper-slide {
                 width: 210px;
@@ -1279,15 +1264,11 @@
     </style>
 </head>
 <body>
-    <!-- ★ AMBIENT SKY BLUE ORBS ★ -->
     <div class="glow-orb glow-orb--1" aria-hidden="true"></div>
     <div class="glow-orb glow-orb--2" aria-hidden="true"></div>
     <div class="glow-orb glow-orb--3" aria-hidden="true"></div>
 
     <div class="wrapper">
-        <!-- ============================================
-             ★★★  HEADER  ★★★
-             ============================================ -->
         <header class="header" role="banner">
             <p class="explore">Discover</p>
             <h1>
@@ -1297,24 +1278,20 @@
             <p class="subtitle">Wander • Explore <span>•</span> Dream <span>•</span> Discover</p>
         </header>
 
-        <!-- CAROUSEL CONTAINER -->
         <div class="carousel-container" role="region" aria-label="Image Carousel">
-            <!-- Slide Counter -->
             <div class="slide-counter" aria-hidden="true">
                 <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
             </div>
 
-            <!-- SWIPER -->
             <div class="swiper">
                 <div class="swiper-wrapper" id="swiper-wrapper" role="list">
 
-                    <!-- SLIDE 1: Mountain Majesty -->
                     <div class="swiper-slide" role="listitem" data-name="Mountain Majesty" data-state="Alps" data-description="Towering peaks dusted with snow, where the crisp alpine air meets endless blue skies.">
                         <button class="remove-btn" aria-label="Remove Mountain Majesty slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&crop=center"
                         alt="Mountain Majesty, Alps"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=1'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1328,13 +1305,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 2: City Lights -->
                     <div class="swiper-slide" role="listitem" data-name="City Lights" data-state="New York" data-description="A dazzling skyline where neon meets starlight, pulsing with energy and dreams.">
                         <button class="remove-btn" aria-label="Remove City Lights slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=500&h=350&fit=crop&crop=center"
                         alt="City Lights, New York"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=2'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1348,13 +1324,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 3: Ocean Breeze -->
                     <div class="swiper-slide" role="listitem" data-name="Ocean Breeze" data-state="Maldives" data-description="Turquoise waters gently kiss white-sand shores beneath a golden sun.">
                         <button class="remove-btn" aria-label="Remove Ocean Breeze slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=350&fit=crop&crop=center"
                         alt="Ocean Breeze, Maldives"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=3'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1368,13 +1343,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 4: Forest Whisper -->
                     <div class="swiper-slide" role="listitem" data-name="Forest Whisper" data-state="Pacific Northwest" data-description="Moss-draped ancient trees and dappled sunlight create a cathedral of green.">
                         <button class="remove-btn" aria-label="Remove Forest Whisper slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=500&h=350&fit=crop&crop=center"
                         alt="Forest Whisper, Pacific Northwest"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=4'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1388,13 +1362,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 5: Desert Dream -->
                     <div class="swiper-slide" role="listitem" data-name="Desert Dream" data-state="Namib" data-description="Endless dunes painted in warm amber, where silence speaks in golden hues.">
                         <button class="remove-btn" aria-label="Remove Desert Dream slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&h=350&fit=crop&crop=center"
                         alt="Desert Dream, Namib"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=5'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1408,13 +1381,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 6: Waterfall Serenade -->
                     <div class="swiper-slide" role="listitem" data-name="Waterfall Serenade" data-state="Iceland" data-description="Cascading crystal water tumbles over ancient basalt into a misty pool.">
                         <button class="remove-btn" aria-label="Remove Waterfall Serenade slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1537565266759-34bbc16be345?w=500&h=350&fit=crop&crop=center"
                         alt="Waterfall Serenade, Iceland"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=6'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1428,13 +1400,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 7: Aurora Glow -->
                     <div class="swiper-slide" role="listitem" data-name="Aurora Glow" data-state="Lapland" data-description="The northern lights dance across the Arctic sky in a symphony of emerald and violet.">
                         <button class="remove-btn" aria-label="Remove Aurora Glow slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1530943463362-c57a092542a3?w=500&h=350&fit=crop&crop=center"
                         alt="Aurora Glow, Lapland"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=7'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1448,13 +1419,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 8: Temple Peace -->
                     <div class="swiper-slide" role="listitem" data-name="Temple Peace" data-state="Kyoto" data-description="Ancient temples rise amid cherry blossoms, where tradition whispers through time.">
                         <button class="remove-btn" aria-label="Remove Temple Peace slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?w=500&h=350&fit=crop&crop=center"
                         alt="Temple Peace, Kyoto"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=8'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1468,13 +1438,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 9: Lake Reflection -->
                     <div class="swiper-slide" role="listitem" data-name="Lake Reflection" data-state="Canadian Rockies" data-description="Glass-like waters mirror towering peaks in a moment of perfect stillness.">
                         <button class="remove-btn" aria-label="Remove Lake Reflection slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=350&fit=crop&crop=center"
                         alt="Lake Reflection, Canadian Rockies"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=9'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1488,13 +1457,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 10: Sunset Horizon -->
                     <div class="swiper-slide" role="listitem" data-name="Sunset Horizon" data-state="Santorini" data-description="The sun melts into the Aegean Sea, painting the sky in shades of fire and gold.">
                         <button class="remove-btn" aria-label="Remove Sunset Horizon slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1504163782861-f53c245f6086?w=500&h=350&fit=crop&crop=center"
                         alt="Sunset Horizon, Santorini"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=10'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1508,13 +1476,12 @@
                         </div>
                     </div>
 
-                    <!-- SLIDE 11: Starry Night -->
                     <div class="swiper-slide" role="listitem" data-name="Starry Night" data-state="Atacama" data-description="The Milky Way arcs across the darkest sky, revealing the universe's ancient light.">
                         <button class="remove-btn" aria-label="Remove Starry Night slide">✕</button>
                         <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=500&h=350&fit=crop&crop=center"
                         alt="Starry Night, Atacama"
                         loading="lazy"
-                        onerror="this.src='https://picsum.photos/500/350?random=11'" />
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1530,16 +1497,13 @@
 
                 </div>
 
-                <!-- Pagination Dots -->
                 <div class="swiper-pagination" role="tablist" aria-label="Slide pagination"></div>
 
-                <!-- ★ AUTOPLAY PROGRESS BAR ★ -->
                 <div class="autoplay-progress" aria-hidden="true">
                     <div class="progress-bar" id="progressBar"></div>
                 </div>
             </div>
 
-            <!-- ★ GLASS ARROWS ★ -->
             <button class="custom-nav-btn custom-btn-prev" aria-label="Previous slide">
                 <i class="fas fa-chevron-left" aria-hidden="true"></i>
             </button>
@@ -1548,7 +1512,6 @@
             </button>
         </div>
 
-        <!-- CREDIT -->
         <div class="credit">
             <i class="fas fa-code" aria-hidden="true"></i>
             <span>Swipeflow Swiper 2S &amp; Webflow Integration</span>
@@ -1558,12 +1521,10 @@
         </div>
     </div>
 
-    <!-- ★ ADD SLIDE BUTTON (Sky Blue Glass) ★ -->
     <button class="add-btn" id="addSlideBtn" aria-label="Add a new slide">
         <i class="fas fa-plus-circle" aria-hidden="true"></i> Add Slide
     </button>
 
-    <!-- ★ ADD SLIDE MODAL (Sky Blue Glass) ★ -->
     <div class="modal-overlay" id="addModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
         <div class="modal">
             <button class="modal-close" id="addModalClose" aria-label="Close add slide dialog">✕</button>
@@ -1592,7 +1553,6 @@
         </div>
     </div>
 
-    <!-- ★ DETAILS MODAL (Sky Blue Glass) ★ -->
     <div class="modal-overlay modal-details" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle">
         <div class="modal">
             <button class="modal-close" id="detailsModalClose" aria-label="Close details dialog">✕</button>
@@ -1605,7 +1565,6 @@
         </div>
     </div>
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
     </script>
 
@@ -1613,9 +1572,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             'use strict';
 
-            // ============================================
-            //  ★★★  SWIPER INIT  ★★★
-            // ============================================
             const swiper = new Swiper('.swiper', {
                 slidesPerView: 'auto',
                 centeredSlides: true,
@@ -1659,9 +1615,6 @@
                 }
             });
 
-            // ============================================
-            //  ★★★  COUNTER UPDATE  ★★★
-            // ============================================
             function updateCounter(swiperInstance) {
                 const current = document.getElementById('currentSlide');
                 const total = document.getElementById('totalSlides');
@@ -1673,9 +1626,6 @@
                 }
             }
 
-            // ============================================
-            //  ★★★  CREATE SLIDE ELEMENT  ★★★
-            // ============================================
             function createSlideElement(name, state, imgUrl, description) {
                 const slide = document.createElement('div');
                 slide.className = 'swiper-slide';
@@ -1684,12 +1634,9 @@
                 slide.dataset.state = state;
                 slide.dataset.description = description || `${name} – a beautiful view in ${state}.`;
 
-                // If image URL is empty or invalid, use a placeholder
-                const imgSrc = imgUrl || 'https://picsum.photos/500/350?random=' + Date.now();
-
                 slide.innerHTML = `
                         <button class="remove-btn" aria-label="Remove ${name} slide">✕</button>
-                        <img src="${imgSrc}" alt="${name}, ${state}" loading="lazy" onerror="this.src='https://picsum.photos/500/350?random=${Date.now()}'" />
+                        <img src="${imgUrl}" alt="${name}, ${state}" loading="lazy" onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1720,9 +1667,6 @@
                 return slide;
             }
 
-            // ============================================
-            //  ★★★  ADD / REMOVE SLIDE  ★★★
-            // ============================================
             function addSlide(name, state, imgUrl, description) {
                 const wrapper = document.getElementById('swiper-wrapper');
                 const newSlide = createSlideElement(name, state, imgUrl, description);
@@ -1744,9 +1688,6 @@
                 }, 300);
             }
 
-            // ============================================
-            //  ★★★  DETAILS MODAL  ★★★
-            // ============================================
             function openDetailsModal(slideElement) {
                 const name = slideElement.dataset.name || 'Unknown';
                 const state = slideElement.dataset.state || 'Unknown';
@@ -1774,9 +1715,6 @@
                 }
             }
 
-            // ============================================
-            //  ★★★  ADD SLIDE MODAL  ★★★
-            // ============================================
             function openAddModal() {
                 const modal = document.getElementById('addModal');
                 modal.classList.add('active');
@@ -1791,10 +1729,6 @@
                 document.getElementById('addSlideBtn').focus();
                 document.getElementById('addSlideForm').reset();
             }
-
-            // ============================================
-            //  ★★★  EVENT BINDING  ★★★
-            // ============================================
 
             document.getElementById('addSlideBtn').addEventListener('click', openAddModal);
 
@@ -1830,7 +1764,6 @@
                 if (e.target === this) closeDetailsModal();
             });
 
-            // Delegate events for dynamically added slides
             document.getElementById('swiper-wrapper').addEventListener('click', function(e) {
                 const btn = e.target.closest('.btn-cta');
                 if (btn) {
@@ -1854,7 +1787,6 @@
                 }
             });
 
-            // Keyboard: Tab trap inside modals
             function trapFocus(modalId) {
                 const modal = document.getElementById(modalId);
                 if (!modal) return;

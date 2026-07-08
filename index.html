@@ -26,7 +26,6 @@
         }
 
         body {
-            /* ★★★ LIGHT SKY BLUE MESH GRADIENT ★★★ */
             background:
                 radial-gradient(circle at 10% 30%, rgba(56, 189, 248, 0.25), transparent 50%),
                 radial-gradient(circle at 90% 70%, rgba(14, 165, 233, 0.15), transparent 50%),
@@ -44,7 +43,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Subtle grain texture */
         body::before {
             content: '';
             position: fixed;
@@ -55,9 +53,6 @@
             opacity: 0.5;
         }
 
-        /* ============================================
-           ★★★  FLOATING SKY BLUE ORBS  ★★★
-           ============================================ */
         .glow-orb {
             position: fixed;
             border-radius: 50%;
@@ -110,7 +105,7 @@
         }
 
         /* ============================================
-           ★★★  HEADER – Dark text on light glass  ★★★
+           ★★★  HEADER  ★★★
            ============================================ */
         .header {
             text-align: center;
@@ -235,23 +230,18 @@
             color: rgba(15, 23, 42, 0.5);
         }
 
-        /* ============================================
-           ★★★  INDIVIDUAL SLIDES (Glass)  ★★★
-           ============================================ */
         .swiper-slide {
             position: relative;
             width: 240px;
             height: 330px;
             border-radius: 20px;
             overflow: hidden;
-            /* ★★★ SKY BLUE TRANSPARENT GLASS ★★★ */
             background: rgba(255, 255, 255, 0.4);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.5);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
             transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-            /* Light theme adjustments */
             filter: saturate(0.4) brightness(0.95);
             opacity: 0.5;
             transform: scale(0.88) perspective(1000px) rotateY(2deg);
@@ -284,7 +274,6 @@
             transform: scale(1.04);
         }
 
-        /* Dark overlay to keep text readable on light glass */
         .swiper-slide .slide-overlay {
             position: absolute;
             bottom: 0;
@@ -309,7 +298,6 @@
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #fbbf24;
-            /* Golden accent */;
             margin-bottom: 3px;
             opacity: 0.9;
             display: inline-block;
@@ -365,9 +353,6 @@
             transform: translateY(0) scale(1);
         }
 
-        /* ============================================
-           ★★★  REMOVE BUTTON  ★★★
-           ============================================ */
         .remove-btn {
             position: absolute;
             top: 10px;
@@ -407,9 +392,6 @@
             box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
         }
 
-        /* ============================================
-           ★★★  ACTIVE SLIDE – Crisp White Glass + Sky Glow  ★★★
-           ============================================ */
         .swiper-slide-active {
             filter: saturate(1) brightness(1);
             opacity: 1;
@@ -575,9 +557,6 @@
             background: rgba(255, 255, 255, 0.5);
         }
 
-        /* ============================================
-           ★★★  GLASS ARROWS (Sky Blue Tint)  ★★★
-           ============================================ */
         .custom-nav-btn {
             position: absolute;
             top: 50%;
@@ -639,9 +618,6 @@
             right: -6px;
         }
 
-        /* ============================================
-           ★★★  PAGINATION  ★★★
-           ============================================ */
         .swiper-pagination {
             bottom: -2px;
             display: flex;
@@ -667,9 +643,6 @@
             border-color: rgba(56, 189, 248, 0.3);
         }
 
-        /* ============================================
-           ★★★  AUTOPLAY PROGRESS  ★★★
-           ============================================ */
         .autoplay-progress {
             position: absolute;
             bottom: 0px;
@@ -692,9 +665,6 @@
             transition: width 0.1s linear;
         }
 
-        /* ============================================
-           ★★★  ADD BUTTON (Sky Blue Glass)  ★★★
-           ============================================ */
         .add-btn {
             position: fixed;
             bottom: 18px;
@@ -751,9 +721,6 @@
             transform: scale(1.1) rotate(-5deg);
         }
 
-        /* ============================================
-           ★★★  MODAL (Sky Blue Glass)  ★★★
-           ============================================ */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -920,9 +887,6 @@
             color: #0284c7;
         }
 
-        /* ============================================
-           ★★★  CREDIT  ★★★
-           ============================================ */
         .credit {
             text-align: center;
             margin-top: 10px;
@@ -1350,7 +1314,7 @@
                         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&crop=center"
                         alt="Mountain Majesty, Alps"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=1'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1370,7 +1334,7 @@
                         <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=500&h=350&fit=crop&crop=center"
                         alt="City Lights, New York"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=2'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1390,7 +1354,7 @@
                         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=350&fit=crop&crop=center"
                         alt="Ocean Breeze, Maldives"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=3'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1410,7 +1374,7 @@
                         <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=500&h=350&fit=crop&crop=center"
                         alt="Forest Whisper, Pacific Northwest"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=4'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1430,7 +1394,7 @@
                         <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&h=350&fit=crop&crop=center"
                         alt="Desert Dream, Namib"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=5'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1450,7 +1414,7 @@
                         <img src="https://images.unsplash.com/photo-1537565266759-34bbc16be345?w=500&h=350&fit=crop&crop=center"
                         alt="Waterfall Serenade, Iceland"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=6'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1470,7 +1434,7 @@
                         <img src="https://images.unsplash.com/photo-1530943463362-c57a092542a3?w=500&h=350&fit=crop&crop=center"
                         alt="Aurora Glow, Lapland"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=7'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1490,7 +1454,7 @@
                         <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?w=500&h=350&fit=crop&crop=center"
                         alt="Temple Peace, Kyoto"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=8'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1510,7 +1474,7 @@
                         <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=350&fit=crop&crop=center"
                         alt="Lake Reflection, Canadian Rockies"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=9'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1530,7 +1494,7 @@
                         <img src="https://images.unsplash.com/photo-1504163782861-f53c245f6086?w=500&h=350&fit=crop&crop=center"
                         alt="Sunset Horizon, Santorini"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=10'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1550,7 +1514,7 @@
                         <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=500&h=350&fit=crop&crop=center"
                         alt="Starry Night, Atacama"
                         loading="lazy"
-                        onerror="this.style.display='none'" />
+                        onerror="this.src='https://picsum.photos/500/350?random=11'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1720,9 +1684,12 @@
                 slide.dataset.state = state;
                 slide.dataset.description = description || `${name} – a beautiful view in ${state}.`;
 
+                // If image URL is empty or invalid, use a placeholder
+                const imgSrc = imgUrl || 'https://picsum.photos/500/350?random=' + Date.now();
+
                 slide.innerHTML = `
                         <button class="remove-btn" aria-label="Remove ${name} slide">✕</button>
-                        <img src="${imgUrl}" alt="${name}, ${state}" loading="lazy" onerror="this.style.display='none'" />
+                        <img src="${imgSrc}" alt="${name}, ${state}" loading="lazy" onerror="this.src='https://picsum.photos/500/350?random=${Date.now()}'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>

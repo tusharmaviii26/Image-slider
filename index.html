@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>America's National Parks</title>
+    <title>Explore the World – Image Slider</title>
 
     <!-- PREMIUM GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -790,6 +790,7 @@
             transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
             box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
             color: #0f172a;
+            position: relative;
         }
 
         .modal-overlay.active .modal {
@@ -1326,14 +1327,14 @@
         <header class="header" role="banner">
             <p class="explore">Discover</p>
             <h1>
-                <span class="accent">America's</span><br />
-                National <span class="sparkle-icon" aria-hidden="true">✦</span> Parks
+                <span class="accent">Explore</span> the<br />
+                <span class="sparkle-icon" aria-hidden="true">✦</span> World
             </h1>
-            <p class="subtitle">Explore the <span>wild</span> &bull; Preserve the <span>wonder</span></p>
+            <p class="subtitle">Wander • Explore <span>•</span> Dream <span>•</span> Discover</p>
         </header>
 
         <!-- CAROUSEL CONTAINER -->
-        <div class="carousel-container" role="region" aria-label="National Parks Carousel">
+        <div class="carousel-container" role="region" aria-label="Image Carousel">
             <!-- Slide Counter -->
             <div class="slide-counter" aria-hidden="true">
                 <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
@@ -1343,93 +1344,73 @@
             <div class="swiper">
                 <div class="swiper-wrapper" id="swiper-wrapper" role="list">
 
-                    <!-- SLIDE 1: YOSEMITE -->
-                    <div class="swiper-slide" role="listitem" data-name="Yosemite" data-state="California" data-description="Yosemite National Park is known for its waterfalls, granite cliffs, giant sequoias, and diverse wildlife. El Capitan and Half Dome are iconic landmarks.">
-                        <button class="remove-btn" aria-label="Remove Yosemite slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=350&fit=crop&crop=center" 
-                             alt="Yosemite National Park, California" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 1: Mountain Majesty -->
+                    <div class="swiper-slide" role="listitem" data-name="Mountain Majesty" data-state="Alps" data-description="Towering peaks dusted with snow, where the crisp alpine air meets endless blue skies.">
+                        <button class="remove-btn" aria-label="Remove Mountain Majesty slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&crop=center"
+                        alt="Mountain Majesty, Alps"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">California</span>
-                                <h2 class="name">Yosemite</h2>
-                                <button class="btn-cta" aria-label="Learn more about Yosemite">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Alps</span>
+                                <h2 class="name">Mountain Majesty</h2>
+                                <button class="btn-cta" aria-label="Learn more about Mountain Majesty">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 2: YELLOWSTONE -->
-                    <div class="swiper-slide" role="listitem" data-name="Yellowstone" data-state="Wyoming · Montana · Idaho" data-description="Yellowstone was the first national park in the world. It's home to geothermal wonders like Old Faithful, vibrant hot springs, and abundant wildlife.">
-                        <button class="remove-btn" aria-label="Remove Yellowstone slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1537565266759-34bbc16be345?w=500&h=350&fit=crop&crop=center" 
-                             alt="Yellowstone National Park" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 2: City Lights -->
+                    <div class="swiper-slide" role="listitem" data-name="City Lights" data-state="New York" data-description="A dazzling skyline where neon meets starlight, pulsing with energy and dreams.">
+                        <button class="remove-btn" aria-label="Remove City Lights slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?w=500&h=350&fit=crop&crop=center"
+                        alt="City Lights, New York"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state" style="font-size:8px;letter-spacing:1.5px;">Wyoming · Montana · Idaho</span>
-                                <h2 class="name">Yellowstone</h2>
-                                <button class="btn-cta" aria-label="Learn more about Yellowstone">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">New York</span>
+                                <h2 class="name">City Lights</h2>
+                                <button class="btn-cta" aria-label="Learn more about City Lights">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 3: BRYCE CANYON -->
-                    <div class="swiper-slide" role="listitem" data-name="Bryce Canyon" data-state="Utah" data-description="Bryce Canyon is famous for its unique hoodoo rock formations. The park offers breathtaking sunrise views and stargazing.">
-                        <button class="remove-btn" aria-label="Remove Bryce Canyon slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&h=350&fit=crop&crop=center" 
-                             alt="Bryce Canyon National Park, Utah" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 3: Ocean Breeze -->
+                    <div class="swiper-slide" role="listitem" data-name="Ocean Breeze" data-state="Maldives" data-description="Turquoise waters gently kiss white-sand shores beneath a golden sun.">
+                        <button class="remove-btn" aria-label="Remove Ocean Breeze slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&h=350&fit=crop&crop=center"
+                        alt="Ocean Breeze, Maldives"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Utah</span>
-                                <h2 class="name">Bryce Canyon</h2>
-                                <button class="btn-cta" aria-label="Learn more about Bryce Canyon">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Maldives</span>
+                                <h2 class="name">Ocean Breeze</h2>
+                                <button class="btn-cta" aria-label="Learn more about Ocean Breeze">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 4: ROCKY MOUNTAIN -->
-                    <div class="swiper-slide" role="listitem" data-name="Rocky Mountain" data-state="Colorado" data-description="Rocky Mountain National Park features majestic peaks, alpine tundra, and over 350 miles of trails with stunning high-altitude views.">
-                        <button class="remove-btn" aria-label="Remove Rocky Mountain slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&crop=center" 
-                             alt="Rocky Mountain National Park, Colorado" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
-                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
-                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
-                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
-                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
-                        <div class="slide-overlay">
-                            <div class="slide-content">
-                                <span class="state">Colorado</span>
-                                <h2 class="name">Rocky Mountain</h2>
-                                <button class="btn-cta" aria-label="Learn more about Rocky Mountain">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- SLIDE 5: VALLEY VISTA -->
-                    <div class="swiper-slide" role="listitem" data-name="Valley Vista" data-state="Pacific Northwest" data-description="Valley Vista offers sweeping views of the Pacific Northwest's lush forests, cascading waterfalls, and misty mountain peaks.">
-                        <button class="remove-btn" aria-label="Remove Valley Vista slide">✕</button>
-                        <img src="https://plus.unsplash.com/premium_photo-1666963323736-5ee1c16ef19d?w=500&h=350&fit=crop&q=80" 
-                             alt="Valley Vista, Pacific Northwest" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 4: Forest Whisper -->
+                    <div class="swiper-slide" role="listitem" data-name="Forest Whisper" data-state="Pacific Northwest" data-description="Moss-draped ancient trees and dappled sunlight create a cathedral of green.">
+                        <button class="remove-btn" aria-label="Remove Forest Whisper slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1511497584788-876760111969?w=500&h=350&fit=crop&crop=center"
+                        alt="Forest Whisper, Pacific Northwest"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
@@ -1437,128 +1418,148 @@
                         <div class="slide-overlay">
                             <div class="slide-content">
                                 <span class="state">Pacific Northwest</span>
-                                <h2 class="name">Valley Vista</h2>
-                                <button class="btn-cta" aria-label="Learn more about Valley Vista">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <h2 class="name">Forest Whisper</h2>
+                                <button class="btn-cta" aria-label="Learn more about Forest Whisper">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 6: ALPINE MEADOW -->
-                    <div class="swiper-slide" role="listitem" data-name="Alpine Meadow" data-state="Rocky Mountains" data-description="Alpine Meadow sits high in the Rocky Mountains, where wildflowers bloom across vast meadows and snow-capped peaks create a stunning landscape.">
-                        <button class="remove-btn" aria-label="Remove Alpine Meadow slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?w=500&h=350&fit=crop&q=80" 
-                             alt="Alpine Meadow, Rocky Mountains" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 5: Desert Dream -->
+                    <div class="swiper-slide" role="listitem" data-name="Desert Dream" data-state="Namib" data-description="Endless dunes painted in warm amber, where silence speaks in golden hues.">
+                        <button class="remove-btn" aria-label="Remove Desert Dream slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&h=350&fit=crop&crop=center"
+                        alt="Desert Dream, Namib"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Rocky Mountains</span>
-                                <h2 class="name">Alpine Meadow</h2>
-                                <button class="btn-cta" aria-label="Learn more about Alpine Meadow">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Namib</span>
+                                <h2 class="name">Desert Dream</h2>
+                                <button class="btn-cta" aria-label="Learn more about Desert Dream">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 7: CRYSTAL LAKE -->
-                    <div class="swiper-slide" role="listitem" data-name="Crystal Lake" data-state="Sierra Nevada" data-description="Crystal Lake glistens in the Sierra Nevada mountains, surrounded by granite peaks and pristine forest with clear alpine waters.">
-                        <button class="remove-btn" aria-label="Remove Crystal Lake slide">✕</button>
-                        <img src="https://plus.unsplash.com/premium_photo-1669839774885-b1958e625b5e?w=500&h=350&fit=crop&q=80" 
-                             alt="Crystal Lake, Sierra Nevada" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 6: Waterfall Serenade -->
+                    <div class="swiper-slide" role="listitem" data-name="Waterfall Serenade" data-state="Iceland" data-description="Cascading crystal water tumbles over ancient basalt into a misty pool.">
+                        <button class="remove-btn" aria-label="Remove Waterfall Serenade slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1537565266759-34bbc16be345?w=500&h=350&fit=crop&crop=center"
+                        alt="Waterfall Serenade, Iceland"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Sierra Nevada</span>
-                                <h2 class="name">Crystal Lake</h2>
-                                <button class="btn-cta" aria-label="Learn more about Crystal Lake">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Iceland</span>
+                                <h2 class="name">Waterfall Serenade</h2>
+                                <button class="btn-cta" aria-label="Learn more about Waterfall Serenade">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 8: SUNSET RIDGE -->
-                    <div class="swiper-slide" role="listitem" data-name="Sunset Ridge" data-state="Desert Southwest" data-description="Sunset Ridge offers spectacular views of the desert Southwest, where red rock formations glow in the golden hour light.">
-                        <button class="remove-btn" aria-label="Remove Sunset Ridge slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1598267410503-d0ef01973f69?w=500&h=350&fit=crop&q=80" 
-                             alt="Sunset Ridge, Desert Southwest" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 7: Aurora Glow -->
+                    <div class="swiper-slide" role="listitem" data-name="Aurora Glow" data-state="Lapland" data-description="The northern lights dance across the Arctic sky in a symphony of emerald and violet.">
+                        <button class="remove-btn" aria-label="Remove Aurora Glow slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1530943463362-c57a092542a3?w=500&h=350&fit=crop&crop=center"
+                        alt="Aurora Glow, Lapland"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Desert Southwest</span>
-                                <h2 class="name">Sunset Ridge</h2>
-                                <button class="btn-cta" aria-label="Learn more about Sunset Ridge">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Lapland</span>
+                                <h2 class="name">Aurora Glow</h2>
+                                <button class="btn-cta" aria-label="Learn more about Aurora Glow">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 9: WILDERNESS PEAK -->
-                    <div class="swiper-slide" role="listitem" data-name="Wilderness Peak" data-state="Appalachian Trail" data-description="Wilderness Peak rises along the Appalachian Trail, offering rugged hiking through ancient forests and breathtaking overlooks.">
-                        <button class="remove-btn" aria-label="Remove Wilderness Peak slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=500&h=350&fit=crop&q=80" 
-                             alt="Wilderness Peak, Appalachian Trail" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 8: Temple Peace -->
+                    <div class="swiper-slide" role="listitem" data-name="Temple Peace" data-state="Kyoto" data-description="Ancient temples rise amid cherry blossoms, where tradition whispers through time.">
+                        <button class="remove-btn" aria-label="Remove Temple Peace slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?w=500&h=350&fit=crop&crop=center"
+                        alt="Temple Peace, Kyoto"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Appalachian Trail</span>
-                                <h2 class="name">Wilderness Peak</h2>
-                                <button class="btn-cta" aria-label="Learn more about Wilderness Peak">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Kyoto</span>
+                                <h2 class="name">Temple Peace</h2>
+                                <button class="btn-cta" aria-label="Learn more about Temple Peace">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 10: GOLDEN VALLEY -->
-                    <div class="swiper-slide" role="listitem" data-name="Golden Valley" data-state="Columbia River Gorge" data-description="Golden Valley captures the beauty of the Columbia River Gorge, where waterfalls cascade into rivers bathed in golden light.">
-                        <button class="remove-btn" aria-label="Remove Golden Valley slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1504163782861-f53c245f6086?w=500&h=350&fit=crop&q=80" 
-                             alt="Golden Valley, Columbia River Gorge" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 9: Lake Reflection -->
+                    <div class="swiper-slide" role="listitem" data-name="Lake Reflection" data-state="Canadian Rockies" data-description="Glass-like waters mirror towering peaks in a moment of perfect stillness.">
+                        <button class="remove-btn" aria-label="Remove Lake Reflection slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=350&fit=crop&crop=center"
+                        alt="Lake Reflection, Canadian Rockies"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Columbia River Gorge</span>
-                                <h2 class="name">Golden Valley</h2>
-                                <button class="btn-cta" aria-label="Learn more about Golden Valley">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Canadian Rockies</span>
+                                <h2 class="name">Lake Reflection</h2>
+                                <button class="btn-cta" aria-label="Learn more about Lake Reflection">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- SLIDE 11: MOUNTAIN LIGHT -->
-                    <div class="swiper-slide" role="listitem" data-name="Mountain Light" data-state="Grand Teton" data-description="Mountain Light in Grand Teton National Park captures the dramatic interplay of light and shadow on the jagged peaks.">
-                        <button class="remove-btn" aria-label="Remove Mountain Light slide">✕</button>
-                        <img src="https://images.unsplash.com/photo-1530943463362-c57a092542a3?w=500&h=350&fit=crop&q=80" 
-                             alt="Mountain Light, Grand Teton" 
-                             loading="lazy"
-                             onerror="this.style.display='none'" />
+                    <!-- SLIDE 10: Sunset Horizon -->
+                    <div class="swiper-slide" role="listitem" data-name="Sunset Horizon" data-state="Santorini" data-description="The sun melts into the Aegean Sea, painting the sky in shades of fire and gold.">
+                        <button class="remove-btn" aria-label="Remove Sunset Horizon slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1504163782861-f53c245f6086?w=500&h=350&fit=crop&crop=center"
+                        alt="Sunset Horizon, Santorini"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
                         <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
                         <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
                         <div class="slide-overlay">
                             <div class="slide-content">
-                                <span class="state">Grand Teton</span>
-                                <h2 class="name">Mountain Light</h2>
-                                <button class="btn-cta" aria-label="Learn more about Mountain Light">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                                <span class="state">Santorini</span>
+                                <h2 class="name">Sunset Horizon</h2>
+                                <button class="btn-cta" aria-label="Learn more about Sunset Horizon">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 11: Starry Night -->
+                    <div class="swiper-slide" role="listitem" data-name="Starry Night" data-state="Atacama" data-description="The Milky Way arcs across the darkest sky, revealing the universe's ancient light.">
+                        <button class="remove-btn" aria-label="Remove Starry Night slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=500&h=350&fit=crop&crop=center"
+                        alt="Starry Night, Atacama"
+                        loading="lazy"
+                        onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Atacama</span>
+                                <h2 class="name">Starry Night</h2>
+                                <button class="btn-cta" aria-label="Learn more about Starry Night">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                             </div>
                         </div>
                     </div>
@@ -1611,16 +1612,16 @@
                     <small id="imageUrlHelp" style="display:block;color:rgba(15,23,42,0.3);font-size:10px;margin-top:4px;">Paste a direct image link</small>
                 </div>
                 <div class="modal-form-group">
-                    <label for="stateName">State / Region</label>
-                    <input type="text" id="stateName" placeholder="e.g. California" required />
+                    <label for="stateName">Location / Region</label>
+                    <input type="text" id="stateName" placeholder="e.g. Swiss Alps" required />
                 </div>
                 <div class="modal-form-group">
-                    <label for="parkName">Park Name</label>
-                    <input type="text" id="parkName" placeholder="e.g. Yosemite" required />
+                    <label for="parkName">Slide Title</label>
+                    <input type="text" id="parkName" placeholder="e.g. Mountain Majesty" required />
                 </div>
                 <div class="modal-form-group">
                     <label for="parkDescription">Description (optional)</label>
-                    <input type="text" id="parkDescription" placeholder="A brief description of the park..." />
+                    <input type="text" id="parkDescription" placeholder="A brief description of the image..." />
                 </div>
                 <button type="submit" class="modal-submit">Add Slide</button>
             </form>
@@ -1631,7 +1632,7 @@
     <div class="modal-overlay modal-details" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle">
         <div class="modal">
             <button class="modal-close" id="detailsModalClose" aria-label="Close details dialog">✕</button>
-            <h2 class="modal-title" id="detailsModalTitle">Park Details</h2>
+            <h2 class="modal-title" id="detailsModalTitle">Image Details</h2>
             <p class="modal-subtitle" id="detailsModalSubtitle"></p>
             <div class="modal-body" id="detailsModalBody">
                 <p><strong>Location:</strong> <span class="highlight" id="detailsLocation"></span></p>
@@ -1717,23 +1718,23 @@
                 slide.setAttribute('role', 'listitem');
                 slide.dataset.name = name;
                 slide.dataset.state = state;
-                slide.dataset.description = description || `${name} – a beautiful national park in ${state}.`;
+                slide.dataset.description = description || `${name} – a beautiful view in ${state}.`;
 
                 slide.innerHTML = `
-                    <button class="remove-btn" aria-label="Remove ${name} slide">✕</button>
-                    <img src="${imgUrl}" alt="${name}, ${state}" loading="lazy" onerror="this.style.display='none'" />
-                    <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
-                    <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
-                    <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
-                    <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
-                    <div class="slide-overlay">
-                        <div class="slide-content">
-                            <span class="state">${state}</span>
-                            <h2 class="name">${name}</h2>
-                            <button class="btn-cta" aria-label="Learn more about ${name}">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        <button class="remove-btn" aria-label="Remove ${name} slide">✕</button>
+                        <img src="${imgUrl}" alt="${name}, ${state}" loading="lazy" onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">${state}</span>
+                                <h2 class="name">${name}</h2>
+                                <button class="btn-cta" aria-label="Learn more about ${name}">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
                         </div>
-                    </div>
-                `;
+                    `;
 
                 const removeBtn = slide.querySelector('.remove-btn');
                 removeBtn.addEventListener('click', function(e) {
@@ -1782,7 +1783,7 @@
             function openDetailsModal(slideElement) {
                 const name = slideElement.dataset.name || 'Unknown';
                 const state = slideElement.dataset.state || 'Unknown';
-                const description = slideElement.dataset.description || 'A beautiful national park.';
+                const description = slideElement.dataset.description || 'A beautiful view.';
 
                 document.getElementById('detailsModalTitle').textContent = name;
                 document.getElementById('detailsModalSubtitle').textContent = state;
@@ -1853,7 +1854,7 @@
                     return;
                 }
 
-                addSlide(name, state, imgUrl, description || `${name} – a beautiful park in ${state}.`);
+                addSlide(name, state, imgUrl, description || `${name} – a beautiful view in ${state}.`);
                 closeAddModal();
             });
 

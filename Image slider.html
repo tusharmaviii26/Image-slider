@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>America's National Parks</title>
+
+    <!-- PREMIUM GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ============================================
+           ★★★  SKY BLUE TRANSPARENT GLASS THEME  ★★★
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* ★★★ LIGHT SKY BLUE MESH GRADIENT ★★★ */
+            background:
+                radial-gradient(circle at 10% 30%, rgba(56, 189, 248, 0.25), transparent 50%),
+                radial-gradient(circle at 90% 70%, rgba(14, 165, 233, 0.15), transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(186, 230, 253, 0.5), #f0f9ff 90%);
+            min-height: 100vh;
+            font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 12px 8px;
+            position: relative;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Subtle grain texture */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        /* ============================================
+           ★★★  FLOATING SKY BLUE ORBS  ★★★
+           ============================================ */
+        .glow-orb {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(120px);
+            pointer-events: none;
+            z-index: 0;
+            animation: floatOrb 12s ease-in-out infinite alternate;
+        }
+        .glow-orb--1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.25), transparent 70%);
+            top: -150px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+        .glow-orb--2 {
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(14, 165, 233, 0.2), transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            animation-delay: 3s;
+        }
+        .glow-orb--3 {
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(103, 232, 249, 0.2), transparent 70%);
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: 6s;
+        }
+
+        @keyframes floatOrb {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            100% {
+                transform: translate(50px, -30px) scale(1.1);
+            }
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ============================================
+           ★★★  HEADER – Dark text on light glass  ★★★
+           ============================================ */
+        .header {
+            text-align: center;
+            margin-bottom: 10px;
+            padding: 0 12px 10px;
+            position: relative;
+        }
+
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(2, 132, 199, 0.4), rgba(2, 132, 199, 0.8), rgba(2, 132, 199, 0.4), transparent);
+            border-radius: 2px;
+        }
+
+        .header .explore {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #0284c7;
+            margin-bottom: 2px;
+            opacity: 0.8;
+        }
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2rem, 6vw, 3.8rem);
+            font-weight: 700;
+            font-style: italic;
+            color: #0f172a;
+            letter-spacing: -0.01em;
+            line-height: 1.05;
+            text-shadow: 0 2px 20px rgba(255, 255, 255, 0.3);
+            position: relative;
+        }
+
+        .header h1 .accent {
+            background: linear-gradient(135deg, #0284c7, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header h1 .sparkle-icon {
+            display: inline-block;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 0.7rem;
+            font-style: normal;
+            font-weight: 300;
+            color: #38bdf8;
+            -webkit-text-fill-color: #38bdf8;
+            margin: 0 1px;
+            opacity: 0.6;
+            animation: sparkle 3s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(1) rotate(0deg);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.3) rotate(180deg);
+            }
+        }
+
+        .header .subtitle {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: rgba(15, 23, 42, 0.4);
+            letter-spacing: 3px;
+            margin-top: 2px;
+            text-transform: uppercase;
+        }
+
+        .header .subtitle span {
+            color: rgba(2, 132, 199, 0.6);
+        }
+
+        /* ============================================
+           ★★★  CAROUSEL  ★★★
+           ============================================ */
+        .carousel-container {
+            position: relative;
+            padding: 14px 4px 28px;
+        }
+
+        .swiper {
+            overflow: visible;
+            position: static;
+            padding: 8px 0;
+        }
+
+        .swiper-wrapper {
+            align-items: center;
+        }
+
+        .slide-counter {
+            position: absolute;
+            top: -2px;
+            right: 12px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 500;
+            color: rgba(15, 23, 42, 0.2);
+            letter-spacing: 2px;
+            z-index: 25;
+            pointer-events: none;
+        }
+
+        .slide-counter span {
+            color: rgba(15, 23, 42, 0.5);
+        }
+
+        /* ============================================
+           ★★★  INDIVIDUAL SLIDES (Glass)  ★★★
+           ============================================ */
+        .swiper-slide {
+            position: relative;
+            width: 240px;
+            height: 330px;
+            border-radius: 20px;
+            overflow: hidden;
+            /* ★★★ SKY BLUE TRANSPARENT GLASS ★★★ */
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            /* Light theme adjustments */
+            filter: saturate(0.4) brightness(0.95);
+            opacity: 0.5;
+            transform: scale(0.88) perspective(1000px) rotateY(2deg);
+            cursor: grab;
+            flex-shrink: 0;
+            will-change: transform, filter, opacity;
+        }
+
+        .swiper-slide:not(.swiper-slide-active):hover {
+            transform: scale(0.92) perspective(1000px) rotateY(4deg) translateY(-4px);
+            filter: saturate(0.6) brightness(1);
+            opacity: 0.7;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+            transition: transform 0.8s ease;
+        }
+
+        .swiper-slide:hover img {
+            transform: scale(1.04);
+        }
+
+        /* Dark overlay to keep text readable on light glass */
+        .swiper-slide .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 28px 18px 18px;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.7) 0%, rgba(15, 23, 42, 0.1) 60%, transparent 100%);
+            z-index: 2;
+            pointer-events: none;
+            transform: translateY(6px);
+            transition: transform 0.5s ease;
+        }
+
+        .swiper-slide-active .slide-overlay {
+            transform: translateY(0);
+        }
+
+        .slide-content .state {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #fbbf24;
+            /* Golden accent */;
+            margin-bottom: 3px;
+            opacity: 0.9;
+            display: inline-block;
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(4px);
+            padding: 3px 12px 3px 14px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .slide-content .name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 22px;
+            font-weight: 700;
+            font-style: italic;
+            color: #ffffff;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-top: 2px;
+        }
+
+        .slide-content .btn-cta {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            display: inline-block;
+            margin-top: 10px;
+            padding: 7px 16px;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #fff;
+            font-weight: 600;
+            font-size: 12px;
+            border-radius: 30px;
+            text-decoration: none;
+            letter-spacing: 0.3px;
+            box-shadow: 0 4px 18px rgba(56, 189, 248, 0.35);
+            pointer-events: auto;
+            opacity: 0;
+            transform: translateY(10px) scale(0.95);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            -webkit-text-fill-color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .slide-content .btn-cta:hover {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            transform: scale(1.05);
+            box-shadow: 0 8px 26px rgba(56, 189, 248, 0.5);
+        }
+
+        .swiper-slide-active .btn-cta {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* ============================================
+           ★★★  REMOVE BUTTON  ★★★
+           ============================================ */
+        .remove-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 15;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: #0f172a;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .swiper-slide:hover .remove-btn,
+        .swiper-slide:focus-within .remove-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .remove-btn:hover {
+            background: rgba(239, 68, 68, 0.9);
+            color: #fff;
+            border-color: rgba(239, 68, 68, 0.5);
+            transform: scale(1.12);
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+        }
+
+        /* ============================================
+           ★★★  ACTIVE SLIDE – Crisp White Glass + Sky Glow  ★★★
+           ============================================ */
+        .swiper-slide-active {
+            filter: saturate(1) brightness(1);
+            opacity: 1;
+            transform: scale(1) perspective(1000px) rotateY(0deg) translateY(-6px);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow:
+                0 20px 60px rgba(56, 189, 248, 0.15),
+                0 0 0 2px rgba(56, 189, 248, 0.3),
+                0 0 40px rgba(56, 189, 248, 0.05);
+            z-index: 10;
+        }
+
+        .swiper-slide-active .slide-overlay {
+            transform: translateY(0);
+        }
+
+        .swiper-slide-active .corner-accent {
+            position: absolute;
+            z-index: 5;
+            width: 16px;
+            height: 16px;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .swiper-slide-active .corner-accent::before,
+        .swiper-slide-active .corner-accent::after {
+            content: '';
+            position: absolute;
+            background: rgba(56, 189, 248, 0.5);
+            border-radius: 1px;
+        }
+
+        .corner-accent--tl {
+            top: 8px;
+            left: 8px;
+        }
+        .corner-accent--tl::before {
+            width: 12px;
+            height: 2px;
+            top: 0;
+            left: 0;
+        }
+        .corner-accent--tl::after {
+            width: 2px;
+            height: 12px;
+            top: 0;
+            left: 0;
+        }
+        .corner-accent--tr {
+            top: 8px;
+            right: 8px;
+        }
+        .corner-accent--tr::before {
+            width: 12px;
+            height: 2px;
+            top: 0;
+            right: 0;
+        }
+        .corner-accent--tr::after {
+            width: 2px;
+            height: 12px;
+            top: 0;
+            right: 0;
+        }
+        .corner-accent--bl {
+            bottom: 8px;
+            left: 8px;
+        }
+        .corner-accent--bl::before {
+            width: 12px;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+        }
+        .corner-accent--bl::after {
+            width: 2px;
+            height: 12px;
+            bottom: 0;
+            left: 0;
+        }
+        .corner-accent--br {
+            bottom: 8px;
+            right: 8px;
+        }
+        .corner-accent--br::before {
+            width: 12px;
+            height: 2px;
+            bottom: 0;
+            right: 0;
+        }
+        .corner-accent--br::after {
+            width: 2px;
+            height: 12px;
+            bottom: 0;
+            right: 0;
+        }
+
+        .swiper-slide-active::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 22px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), transparent 60%);
+            z-index: -1;
+            animation: pulseRing 3s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes pulseRing {
+            0%,
+            100% {
+                opacity: 0.4;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.9;
+                transform: scale(1.02);
+            }
+        }
+
+        .swiper-slide-next,
+        .swiper-slide-prev {
+            filter: saturate(0.5) brightness(0.9);
+            opacity: 0.65;
+            transform: scale(0.9) perspective(1000px) rotateY(1deg);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        .swiper-slide-next .slide-content .name,
+        .swiper-slide-prev .slide-content .name {
+            color: #0f172a;
+            text-shadow: none;
+            background: none;
+            -webkit-text-fill-color: #0f172a;
+        }
+
+        .swiper-slide-next .slide-content .state,
+        .swiper-slide-prev .slide-content .state {
+            color: #0284c7;
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-next):not(.swiper-slide-prev) {
+            filter: saturate(0.3) brightness(0.8);
+            opacity: 0.3;
+            transform: scale(0.78) perspective(1000px) rotateY(3deg);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .slide-content .name {
+            -webkit-text-fill-color: #0f172a;
+            color: #0f172a;
+            background: none;
+            text-shadow: none;
+        }
+
+        .swiper-slide:not(.swiper-slide-active) .slide-content .state {
+            color: #0284c7;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ============================================
+           ★★★  GLASS ARROWS (Sky Blue Tint)  ★★★
+           ============================================ */
+        .custom-nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #0284c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            z-index: 30;
+            user-select: none;
+        }
+
+        .custom-nav-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .custom-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.8);
+            border-color: rgba(56, 189, 248, 0.4);
+            transform: translateY(-50%) scale(1.08);
+            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.15);
+            color: #0369a1;
+        }
+
+        .custom-nav-btn:hover i {
+            transform: scale(1.1);
+        }
+
+        .custom-nav-btn i {
+            filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.1));
+            transition: transform 0.3s ease;
+        }
+
+        .custom-btn-prev {
+            left: -6px;
+        }
+        .custom-btn-next {
+            right: -6px;
+        }
+
+        /* ============================================
+           ★★★  PAGINATION  ★★★
+           ============================================ */
+        .swiper-pagination {
+            bottom: -2px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        .swiper-pagination-bullet {
+            background: rgba(15, 23, 42, 0.15);
+            opacity: 1;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #0284c7;
+            width: 22px;
+            border-radius: 6px;
+            box-shadow: 0 0 16px rgba(56, 189, 248, 0.4);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        /* ============================================
+           ★★★  AUTOPLAY PROGRESS  ★★★
+           ============================================ */
+        .autoplay-progress {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            border-radius: 2px;
+            background: rgba(15, 23, 42, 0.06);
+            overflow: hidden;
+            z-index: 20;
+            pointer-events: none;
+        }
+
+        .autoplay-progress .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, rgba(56, 189, 248, 0.3), #0284c7);
+            border-radius: 2px;
+            transition: width 0.1s linear;
+        }
+
+        /* ============================================
+           ★★★  ADD BUTTON (Sky Blue Glass)  ★★★
+           ============================================ */
+        .add-btn {
+            position: fixed;
+            bottom: 18px;
+            right: 18px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 40px;
+            padding: 10px 18px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.2px;
+        }
+
+        .add-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 40px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .add-btn:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.15);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .add-btn i {
+            font-size: 14px;
+            color: #0284c7;
+            filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.2));
+            transition: transform 0.3s ease;
+        }
+
+        .add-btn:hover i {
+            transform: scale(1.1) rotate(-5deg);
+        }
+
+        /* ============================================
+           ★★★  MODAL (Sky Blue Glass)  ★★★
+           ============================================ */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(15, 23, 42, 0.3);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .modal {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 24px;
+            padding: 32px 36px 36px;
+            max-width: 480px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: scale(0.92) translateY(20px);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.08);
+            color: #0f172a;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 18px;
+            background: none;
+            border: none;
+            color: rgba(15, 23, 42, 0.3);
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding: 4px 8px;
+            border-radius: 8px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1;
+        }
+
+        .modal-close:hover {
+            color: #0f172a;
+            background: rgba(0, 0, 0, 0.04);
+        }
+
+        .modal-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+            font-style: italic;
+            color: #0f172a;
+            margin-bottom: 4px;
+            background: linear-gradient(135deg, #0f172a 60%, #0284c7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modal-subtitle {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(15, 23, 42, 0.4);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .modal-form-group {
+            margin-bottom: 16px;
+        }
+
+        .modal-form-group label {
+            display: block;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            color: rgba(15, 23, 42, 0.6);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .modal-form-group input {
+            width: 100%;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            border-radius: 12px;
+            color: #0f172a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .modal-form-group input::placeholder {
+            color: rgba(15, 23, 42, 0.2);
+        }
+
+        .modal-form-group input:focus {
+            border-color: #38bdf8;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+        }
+
+        .modal-submit {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-submit:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(56, 189, 248, 0.35);
+        }
+
+        .modal-details .modal-title {
+            font-size: 32px;
+        }
+
+        .modal-details .modal-body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 14px;
+            color: rgba(15, 23, 42, 0.7);
+            line-height: 1.7;
+            margin: 12px 0 20px;
+        }
+
+        .modal-details .modal-body strong {
+            color: #0f172a;
+        }
+
+        .modal-details .modal-body .highlight {
+            color: #0284c7;
+        }
+
+        /* ============================================
+           ★★★  CREDIT  ★★★
+           ============================================ */
+        .credit {
+            text-align: center;
+            margin-top: 10px;
+            padding: 10px 12px 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 10px;
+            color: rgba(15, 23, 42, 0.2);
+            letter-spacing: 0.3px;
+            border-top: 1px solid rgba(15, 23, 42, 0.04);
+            padding-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .credit span {
+            color: rgba(15, 23, 42, 0.5);
+            font-weight: 500;
+        }
+
+        .credit i {
+            color: #0284c7;
+            font-size: 8px;
+            opacity: 0.5;
+        }
+
+        .credit .heart {
+            color: #ef4444;
+            font-size: 9px;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* ============================================
+           ★★★  RESPONSIVE  ★★★
+           ============================================ */
+        @media (max-width: 1024px) {
+            .swiper-slide {
+                width: 210px;
+                height: 290px;
+                border-radius: 16px;
+            }
+            .slide-content .slide-overlay {
+                padding: 24px 16px 16px;
+            }
+            .slide-content .name {
+                font-size: 20px;
+            }
+            .slide-content .state {
+                font-size: 9px;
+                letter-spacing: 3px;
+                padding: 3px 10px;
+            }
+            .slide-content .btn-cta {
+                font-size: 11px;
+                padding: 6px 14px;
+                margin-top: 8px;
+            }
+            .custom-nav-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 14px;
+            }
+            .custom-btn-prev {
+                left: -5px;
+            }
+            .custom-btn-next {
+                right: -5px;
+            }
+            .header h1 {
+                font-size: clamp(1.8rem, 6vw, 3.2rem);
+            }
+            .corner-accent {
+                display: none !important;
+            }
+            .glow-orb--3 {
+                display: none;
+            }
+            .glow-orb--1 {
+                width: 400px;
+                height: 400px;
+                top: -150px;
+                right: -150px;
+            }
+            .glow-orb--2 {
+                width: 350px;
+                height: 350px;
+                bottom: -100px;
+                left: -100px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                width: 200px;
+                height: 270px;
+                border-radius: 16px;
+            }
+            .slide-content .slide-overlay {
+                padding: 20px 14px 14px;
+            }
+            .slide-content .name {
+                font-size: 18px;
+            }
+            .slide-content .state {
+                font-size: 9px;
+                letter-spacing: 2.5px;
+                padding: 2px 8px;
+            }
+            .slide-content .btn-cta {
+                font-size: 10px;
+                padding: 5px 12px;
+                margin-top: 8px;
+            }
+            .custom-nav-btn {
+                width: 34px;
+                height: 34px;
+                font-size: 12px;
+            }
+            .custom-btn-prev {
+                left: -4px;
+            }
+            .custom-btn-next {
+                right: -4px;
+            }
+            .header h1 {
+                font-size: clamp(1.6rem, 7vw, 2.6rem);
+            }
+            .header .explore {
+                font-size: 9px;
+                letter-spacing: 4px;
+            }
+            .header .subtitle {
+                font-size: 9px;
+                letter-spacing: 2px;
+            }
+            .header::after {
+                width: 50px;
+            }
+            .swiper-pagination-bullet {
+                width: 7px;
+                height: 7px;
+            }
+            .swiper-pagination-bullet-active {
+                width: 18px;
+            }
+            .add-btn {
+                padding: 8px 16px;
+                font-size: 11px;
+                bottom: 14px;
+                right: 14px;
+            }
+            .add-btn i {
+                font-size: 12px;
+            }
+            .remove-btn {
+                width: 22px;
+                height: 22px;
+                font-size: 10px;
+                top: 8px;
+                right: 8px;
+            }
+            .carousel-container {
+                padding: 12px 4px 24px;
+            }
+            .slide-counter {
+                font-size: 9px;
+                top: -2px;
+                right: 10px;
+            }
+            .autoplay-progress {
+                width: 30px;
+                bottom: 0px;
+            }
+            .corner-accent {
+                display: none !important;
+            }
+            .modal {
+                padding: 24px 20px 28px;
+            }
+            .modal-title {
+                font-size: 24px;
+            }
+            .glow-orb--1 {
+                width: 300px;
+                height: 300px;
+                filter: blur(80px);
+            }
+            .glow-orb--2 {
+                width: 250px;
+                height: 250px;
+                filter: blur(80px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .swiper-slide {
+                width: 160px;
+                height: 220px;
+                border-radius: 14px;
+            }
+            .slide-content .slide-overlay {
+                padding: 16px 12px 12px;
+            }
+            .slide-content .name {
+                font-size: 16px;
+            }
+            .slide-content .state {
+                font-size: 8px;
+                letter-spacing: 2px;
+                padding: 2px 8px;
+                margin-bottom: 2px;
+            }
+            .slide-content .btn-cta {
+                font-size: 9px;
+                padding: 4px 12px;
+                margin-top: 6px;
+            }
+            .custom-nav-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 11px;
+                border-width: 1px;
+            }
+            .custom-btn-prev {
+                left: -3px;
+            }
+            .custom-btn-next {
+                right: -3px;
+            }
+            .header h1 {
+                font-size: clamp(1.4rem, 8vw, 2rem);
+            }
+            .header .explore {
+                font-size: 8px;
+                letter-spacing: 3px;
+            }
+            .header .subtitle {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+            .header h1 .sparkle-icon {
+                display: none;
+            }
+            .header::after {
+                width: 40px;
+            }
+            .swiper-pagination-bullet {
+                width: 6px;
+                height: 6px;
+            }
+            .swiper-pagination-bullet-active {
+                width: 16px;
+            }
+            .add-btn {
+                padding: 6px 12px;
+                font-size: 10px;
+                bottom: 10px;
+                right: 10px;
+                border-radius: 30px;
+                gap: 5px;
+            }
+            .add-btn i {
+                font-size: 10px;
+            }
+            .remove-btn {
+                width: 18px;
+                height: 18px;
+                font-size: 8px;
+                top: 6px;
+                right: 6px;
+            }
+            .credit {
+                font-size: 8px;
+                gap: 4px;
+                padding-top: 8px;
+            }
+            .carousel-container {
+                padding: 10px 2px 20px;
+            }
+            .slide-counter {
+                display: none;
+            }
+            .autoplay-progress {
+                width: 24px;
+                bottom: 0px;
+            }
+            .corner-accent {
+                display: none !important;
+            }
+            .modal {
+                padding: 20px 16px 24px;
+                border-radius: 18px;
+            }
+            .modal-title {
+                font-size: 22px;
+            }
+            .modal-details .modal-title {
+                font-size: 24px;
+            }
+            .modal-form-group input {
+                font-size: 13px;
+                padding: 8px 12px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .swiper-slide {
+                width: 130px;
+                height: 180px;
+                border-radius: 12px;
+            }
+            .slide-content .slide-overlay {
+                padding: 12px 10px 10px;
+            }
+            .slide-content .name {
+                font-size: 13px;
+            }
+            .slide-content .state {
+                font-size: 7px;
+                letter-spacing: 1.5px;
+                padding: 1px 6px;
+            }
+            .slide-content .btn-cta {
+                font-size: 8px;
+                padding: 4px 10px;
+                margin-top: 4px;
+            }
+            .custom-nav-btn {
+                width: 24px;
+                height: 24px;
+                font-size: 9px;
+            }
+            .custom-btn-prev {
+                left: -2px;
+            }
+            .custom-btn-next {
+                right: -2px;
+            }
+            .header h1 {
+                font-size: clamp(1.2rem, 10vw, 1.6rem);
+            }
+            .header .explore {
+                font-size: 7px;
+                letter-spacing: 2px;
+            }
+            .header .subtitle {
+                font-size: 7px;
+                letter-spacing: 1.5px;
+            }
+            .swiper-pagination-bullet {
+                width: 5px;
+                height: 5px;
+            }
+            .swiper-pagination-bullet-active {
+                width: 12px;
+            }
+            .add-btn {
+                padding: 5px 10px;
+                font-size: 9px;
+                bottom: 8px;
+                right: 8px;
+                gap: 4px;
+            }
+            .add-btn i {
+                font-size: 8px;
+            }
+            .remove-btn {
+                width: 16px;
+                height: 16px;
+                font-size: 7px;
+                top: 4px;
+                right: 4px;
+            }
+            .autoplay-progress {
+                width: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ★ AMBIENT SKY BLUE ORBS ★ -->
+    <div class="glow-orb glow-orb--1" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb--2" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb--3" aria-hidden="true"></div>
+
+    <div class="wrapper">
+        <!-- ============================================
+             ★★★  HEADER  ★★★
+             ============================================ -->
+        <header class="header" role="banner">
+            <p class="explore">Discover</p>
+            <h1>
+                <span class="accent">America's</span><br />
+                National <span class="sparkle-icon" aria-hidden="true">✦</span> Parks
+            </h1>
+            <p class="subtitle">Explore the <span>wild</span> &bull; Preserve the <span>wonder</span></p>
+        </header>
+
+        <!-- CAROUSEL CONTAINER -->
+        <div class="carousel-container" role="region" aria-label="National Parks Carousel">
+            <!-- Slide Counter -->
+            <div class="slide-counter" aria-hidden="true">
+                <span id="currentSlide">1</span> / <span id="totalSlides">11</span>
+            </div>
+
+            <!-- SWIPER -->
+            <div class="swiper">
+                <div class="swiper-wrapper" id="swiper-wrapper" role="list">
+
+                    <!-- SLIDE 1: YOSEMITE -->
+                    <div class="swiper-slide" role="listitem" data-name="Yosemite" data-state="California" data-description="Yosemite National Park is known for its waterfalls, granite cliffs, giant sequoias, and diverse wildlife. El Capitan and Half Dome are iconic landmarks.">
+                        <button class="remove-btn" aria-label="Remove Yosemite slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=500&h=350&fit=crop&crop=center" 
+                             alt="Yosemite National Park, California" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">California</span>
+                                <h2 class="name">Yosemite</h2>
+                                <button class="btn-cta" aria-label="Learn more about Yosemite">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2: YELLOWSTONE -->
+                    <div class="swiper-slide" role="listitem" data-name="Yellowstone" data-state="Wyoming · Montana · Idaho" data-description="Yellowstone was the first national park in the world. It's home to geothermal wonders like Old Faithful, vibrant hot springs, and abundant wildlife.">
+                        <button class="remove-btn" aria-label="Remove Yellowstone slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1537565266759-34bbc16be345?w=500&h=350&fit=crop&crop=center" 
+                             alt="Yellowstone National Park" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state" style="font-size:8px;letter-spacing:1.5px;">Wyoming · Montana · Idaho</span>
+                                <h2 class="name">Yellowstone</h2>
+                                <button class="btn-cta" aria-label="Learn more about Yellowstone">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 3: BRYCE CANYON -->
+                    <div class="swiper-slide" role="listitem" data-name="Bryce Canyon" data-state="Utah" data-description="Bryce Canyon is famous for its unique hoodoo rock formations. The park offers breathtaking sunrise views and stargazing.">
+                        <button class="remove-btn" aria-label="Remove Bryce Canyon slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=500&h=350&fit=crop&crop=center" 
+                             alt="Bryce Canyon National Park, Utah" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Utah</span>
+                                <h2 class="name">Bryce Canyon</h2>
+                                <button class="btn-cta" aria-label="Learn more about Bryce Canyon">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 4: ROCKY MOUNTAIN -->
+                    <div class="swiper-slide" role="listitem" data-name="Rocky Mountain" data-state="Colorado" data-description="Rocky Mountain National Park features majestic peaks, alpine tundra, and over 350 miles of trails with stunning high-altitude views.">
+                        <button class="remove-btn" aria-label="Remove Rocky Mountain slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=350&fit=crop&crop=center" 
+                             alt="Rocky Mountain National Park, Colorado" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Colorado</span>
+                                <h2 class="name">Rocky Mountain</h2>
+                                <button class="btn-cta" aria-label="Learn more about Rocky Mountain">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 5: VALLEY VISTA -->
+                    <div class="swiper-slide" role="listitem" data-name="Valley Vista" data-state="Pacific Northwest" data-description="Valley Vista offers sweeping views of the Pacific Northwest's lush forests, cascading waterfalls, and misty mountain peaks.">
+                        <button class="remove-btn" aria-label="Remove Valley Vista slide">✕</button>
+                        <img src="https://plus.unsplash.com/premium_photo-1666963323736-5ee1c16ef19d?w=500&h=350&fit=crop&q=80" 
+                             alt="Valley Vista, Pacific Northwest" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Pacific Northwest</span>
+                                <h2 class="name">Valley Vista</h2>
+                                <button class="btn-cta" aria-label="Learn more about Valley Vista">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 6: ALPINE MEADOW -->
+                    <div class="swiper-slide" role="listitem" data-name="Alpine Meadow" data-state="Rocky Mountains" data-description="Alpine Meadow sits high in the Rocky Mountains, where wildflowers bloom across vast meadows and snow-capped peaks create a stunning landscape.">
+                        <button class="remove-btn" aria-label="Remove Alpine Meadow slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1498598457418-36ef20772bb9?w=500&h=350&fit=crop&q=80" 
+                             alt="Alpine Meadow, Rocky Mountains" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Rocky Mountains</span>
+                                <h2 class="name">Alpine Meadow</h2>
+                                <button class="btn-cta" aria-label="Learn more about Alpine Meadow">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 7: CRYSTAL LAKE -->
+                    <div class="swiper-slide" role="listitem" data-name="Crystal Lake" data-state="Sierra Nevada" data-description="Crystal Lake glistens in the Sierra Nevada mountains, surrounded by granite peaks and pristine forest with clear alpine waters.">
+                        <button class="remove-btn" aria-label="Remove Crystal Lake slide">✕</button>
+                        <img src="https://plus.unsplash.com/premium_photo-1669839774885-b1958e625b5e?w=500&h=350&fit=crop&q=80" 
+                             alt="Crystal Lake, Sierra Nevada" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Sierra Nevada</span>
+                                <h2 class="name">Crystal Lake</h2>
+                                <button class="btn-cta" aria-label="Learn more about Crystal Lake">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 8: SUNSET RIDGE -->
+                    <div class="swiper-slide" role="listitem" data-name="Sunset Ridge" data-state="Desert Southwest" data-description="Sunset Ridge offers spectacular views of the desert Southwest, where red rock formations glow in the golden hour light.">
+                        <button class="remove-btn" aria-label="Remove Sunset Ridge slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1598267410503-d0ef01973f69?w=500&h=350&fit=crop&q=80" 
+                             alt="Sunset Ridge, Desert Southwest" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Desert Southwest</span>
+                                <h2 class="name">Sunset Ridge</h2>
+                                <button class="btn-cta" aria-label="Learn more about Sunset Ridge">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 9: WILDERNESS PEAK -->
+                    <div class="swiper-slide" role="listitem" data-name="Wilderness Peak" data-state="Appalachian Trail" data-description="Wilderness Peak rises along the Appalachian Trail, offering rugged hiking through ancient forests and breathtaking overlooks.">
+                        <button class="remove-btn" aria-label="Remove Wilderness Peak slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?w=500&h=350&fit=crop&q=80" 
+                             alt="Wilderness Peak, Appalachian Trail" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Appalachian Trail</span>
+                                <h2 class="name">Wilderness Peak</h2>
+                                <button class="btn-cta" aria-label="Learn more about Wilderness Peak">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 10: GOLDEN VALLEY -->
+                    <div class="swiper-slide" role="listitem" data-name="Golden Valley" data-state="Columbia River Gorge" data-description="Golden Valley captures the beauty of the Columbia River Gorge, where waterfalls cascade into rivers bathed in golden light.">
+                        <button class="remove-btn" aria-label="Remove Golden Valley slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1504163782861-f53c245f6086?w=500&h=350&fit=crop&q=80" 
+                             alt="Golden Valley, Columbia River Gorge" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Columbia River Gorge</span>
+                                <h2 class="name">Golden Valley</h2>
+                                <button class="btn-cta" aria-label="Learn more about Golden Valley">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 11: MOUNTAIN LIGHT -->
+                    <div class="swiper-slide" role="listitem" data-name="Mountain Light" data-state="Grand Teton" data-description="Mountain Light in Grand Teton National Park captures the dramatic interplay of light and shadow on the jagged peaks.">
+                        <button class="remove-btn" aria-label="Remove Mountain Light slide">✕</button>
+                        <img src="https://images.unsplash.com/photo-1530943463362-c57a092542a3?w=500&h=350&fit=crop&q=80" 
+                             alt="Mountain Light, Grand Teton" 
+                             loading="lazy"
+                             onerror="this.style.display='none'" />
+                        <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                        <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                        <div class="slide-overlay">
+                            <div class="slide-content">
+                                <span class="state">Grand Teton</span>
+                                <h2 class="name">Mountain Light</h2>
+                                <button class="btn-cta" aria-label="Learn more about Mountain Light">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Pagination Dots -->
+                <div class="swiper-pagination" role="tablist" aria-label="Slide pagination"></div>
+
+                <!-- ★ AUTOPLAY PROGRESS BAR ★ -->
+                <div class="autoplay-progress" aria-hidden="true">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <!-- ★ GLASS ARROWS ★ -->
+            <button class="custom-nav-btn custom-btn-prev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button class="custom-nav-btn custom-btn-next" aria-label="Next slide">
+                <i class="fas fa-chevron-right" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- CREDIT -->
+        <div class="credit">
+            <i class="fas fa-code" aria-hidden="true"></i>
+            <span>Swipeflow Swiper 2S &amp; Webflow Integration</span>
+            <i class="fas fa-circle" aria-hidden="true" style="font-size:3px;"></i>
+            by Ficture
+            <span class="heart" aria-hidden="true">♥</span>
+        </div>
+    </div>
+
+    <!-- ★ ADD SLIDE BUTTON (Sky Blue Glass) ★ -->
+    <button class="add-btn" id="addSlideBtn" aria-label="Add a new slide">
+        <i class="fas fa-plus-circle" aria-hidden="true"></i> Add Slide
+    </button>
+
+    <!-- ★ ADD SLIDE MODAL (Sky Blue Glass) ★ -->
+    <div class="modal-overlay" id="addModal" role="dialog" aria-modal="true" aria-labelledby="addModalTitle">
+        <div class="modal">
+            <button class="modal-close" id="addModalClose" aria-label="Close add slide dialog">✕</button>
+            <h2 class="modal-title" id="addModalTitle">Add New Slide</h2>
+            <p class="modal-subtitle">Enter the details below</p>
+            <form id="addSlideForm" novalidate>
+                <div class="modal-form-group">
+                    <label for="imageUrl">Image URL</label>
+                    <input type="url" id="imageUrl" placeholder="https://images.unsplash.com/photo-..." required aria-describedby="imageUrlHelp" />
+                    <small id="imageUrlHelp" style="display:block;color:rgba(15,23,42,0.3);font-size:10px;margin-top:4px;">Paste a direct image link</small>
+                </div>
+                <div class="modal-form-group">
+                    <label for="stateName">State / Region</label>
+                    <input type="text" id="stateName" placeholder="e.g. California" required />
+                </div>
+                <div class="modal-form-group">
+                    <label for="parkName">Park Name</label>
+                    <input type="text" id="parkName" placeholder="e.g. Yosemite" required />
+                </div>
+                <div class="modal-form-group">
+                    <label for="parkDescription">Description (optional)</label>
+                    <input type="text" id="parkDescription" placeholder="A brief description of the park..." />
+                </div>
+                <button type="submit" class="modal-submit">Add Slide</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ★ DETAILS MODAL (Sky Blue Glass) ★ -->
+    <div class="modal-overlay modal-details" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="detailsModalTitle">
+        <div class="modal">
+            <button class="modal-close" id="detailsModalClose" aria-label="Close details dialog">✕</button>
+            <h2 class="modal-title" id="detailsModalTitle">Park Details</h2>
+            <p class="modal-subtitle" id="detailsModalSubtitle"></p>
+            <div class="modal-body" id="detailsModalBody">
+                <p><strong>Location:</strong> <span class="highlight" id="detailsLocation"></span></p>
+                <p id="detailsDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js">
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            'use strict';
+
+            // ============================================
+            //  ★★★  SWIPER INIT  ★★★
+            // ============================================
+            const swiper = new Swiper('.swiper', {
+                slidesPerView: 'auto',
+                centeredSlides: true,
+                spaceBetween: 18,
+                loop: true,
+                grabCursor: true,
+                navigation: {
+                    nextEl: '.custom-btn-next',
+                    prevEl: '.custom-btn-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: false,
+                },
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                breakpoints: {
+                    0: { spaceBetween: 8 },
+                    480: { spaceBetween: 10 },
+                    768: { spaceBetween: 14 },
+                    1024: { spaceBetween: 18 }
+                },
+                on: {
+                    init: function() {
+                        this.slides.forEach((slide) => {
+                            slide.style.transition = 'all 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+                        });
+                        updateCounter(this);
+                    },
+                    slideChange: function() {
+                        updateCounter(this);
+                    },
+                    autoplayTimeLeft: function(s, time, progress) {
+                        const bar = document.getElementById('progressBar');
+                        if (bar) bar.style.width = (1 - progress) * 100 + '%';
+                    }
+                }
+            });
+
+            // ============================================
+            //  ★★★  COUNTER UPDATE  ★★★
+            // ============================================
+            function updateCounter(swiperInstance) {
+                const current = document.getElementById('currentSlide');
+                const total = document.getElementById('totalSlides');
+                if (current && total) {
+                    const realIndex = swiperInstance.realIndex + 1;
+                    const totalSlides = swiperInstance.slides.length - 2;
+                    current.textContent = realIndex;
+                    total.textContent = totalSlides;
+                }
+            }
+
+            // ============================================
+            //  ★★★  CREATE SLIDE ELEMENT  ★★★
+            // ============================================
+            function createSlideElement(name, state, imgUrl, description) {
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                slide.setAttribute('role', 'listitem');
+                slide.dataset.name = name;
+                slide.dataset.state = state;
+                slide.dataset.description = description || `${name} – a beautiful national park in ${state}.`;
+
+                slide.innerHTML = `
+                    <button class="remove-btn" aria-label="Remove ${name} slide">✕</button>
+                    <img src="${imgUrl}" alt="${name}, ${state}" loading="lazy" onerror="this.style.display='none'" />
+                    <div class="corner-accent corner-accent--tl" aria-hidden="true"></div>
+                    <div class="corner-accent corner-accent--tr" aria-hidden="true"></div>
+                    <div class="corner-accent corner-accent--bl" aria-hidden="true"></div>
+                    <div class="corner-accent corner-accent--br" aria-hidden="true"></div>
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <span class="state">${state}</span>
+                            <h2 class="name">${name}</h2>
+                            <button class="btn-cta" aria-label="Learn more about ${name}">Explore <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                `;
+
+                const removeBtn = slide.querySelector('.remove-btn');
+                removeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const slideEl = this.closest('.swiper-slide');
+                    removeSlide(slideEl);
+                });
+
+                const exploreBtn = slide.querySelector('.btn-cta');
+                exploreBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const slideEl = this.closest('.swiper-slide');
+                    openDetailsModal(slideEl);
+                });
+
+                return slide;
+            }
+
+            // ============================================
+            //  ★★★  ADD / REMOVE SLIDE  ★★★
+            // ============================================
+            function addSlide(name, state, imgUrl, description) {
+                const wrapper = document.getElementById('swiper-wrapper');
+                const newSlide = createSlideElement(name, state, imgUrl, description);
+                wrapper.appendChild(newSlide);
+                swiper.appendSlide(newSlide);
+                swiper.slideTo(swiper.slides.length - 1);
+                setTimeout(() => updateCounter(swiper), 200);
+            }
+
+            function removeSlide(slideElement) {
+                const index = swiper.slides.indexOf(slideElement);
+                if (index === -1) return;
+                slideElement.style.transform = 'scale(0.8) rotate(3deg)';
+                slideElement.style.opacity = '0';
+                slideElement.style.filter = 'blur(4px)';
+                setTimeout(() => {
+                    swiper.removeSlide(index);
+                    setTimeout(() => updateCounter(swiper), 100);
+                }, 300);
+            }
+
+            // ============================================
+            //  ★★★  DETAILS MODAL  ★★★
+            // ============================================
+            function openDetailsModal(slideElement) {
+                const name = slideElement.dataset.name || 'Unknown';
+                const state = slideElement.dataset.state || 'Unknown';
+                const description = slideElement.dataset.description || 'A beautiful national park.';
+
+                document.getElementById('detailsModalTitle').textContent = name;
+                document.getElementById('detailsModalSubtitle').textContent = state;
+                document.getElementById('detailsLocation').textContent = state;
+                document.getElementById('detailsDescription').textContent = description;
+
+                const modal = document.getElementById('detailsModal');
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.getElementById('detailsModalClose').focus();
+            }
+
+            function closeDetailsModal() {
+                const modal = document.getElementById('detailsModal');
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                const activeSlide = document.querySelector('.swiper-slide-active');
+                if (activeSlide) {
+                    const btn = activeSlide.querySelector('.btn-cta');
+                    if (btn) btn.focus();
+                }
+            }
+
+            // ============================================
+            //  ★★★  ADD SLIDE MODAL  ★★★
+            // ============================================
+            function openAddModal() {
+                const modal = document.getElementById('addModal');
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.getElementById('imageUrl').focus();
+            }
+
+            function closeAddModal() {
+                const modal = document.getElementById('addModal');
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+                document.getElementById('addSlideBtn').focus();
+                document.getElementById('addSlideForm').reset();
+            }
+
+            // ============================================
+            //  ★★★  EVENT BINDING  ★★★
+            // ============================================
+
+            document.getElementById('addSlideBtn').addEventListener('click', openAddModal);
+
+            document.getElementById('addModalClose').addEventListener('click', closeAddModal);
+            document.getElementById('addModal').addEventListener('click', function(e) {
+                if (e.target === this) closeAddModal();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    if (document.getElementById('addModal').classList.contains('active')) closeAddModal();
+                    if (document.getElementById('detailsModal').classList.contains('active')) closeDetailsModal();
+                }
+            });
+
+            document.getElementById('addSlideForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const imgUrl = document.getElementById('imageUrl').value.trim();
+                const state = document.getElementById('stateName').value.trim();
+                const name = document.getElementById('parkName').value.trim();
+                const description = document.getElementById('parkDescription').value.trim();
+
+                if (!imgUrl || !state || !name) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                addSlide(name, state, imgUrl, description || `${name} – a beautiful park in ${state}.`);
+                closeAddModal();
+            });
+
+            document.getElementById('detailsModalClose').addEventListener('click', closeDetailsModal);
+            document.getElementById('detailsModal').addEventListener('click', function(e) {
+                if (e.target === this) closeDetailsModal();
+            });
+
+            // Delegate events for dynamically added slides
+            document.getElementById('swiper-wrapper').addEventListener('click', function(e) {
+                const btn = e.target.closest('.btn-cta');
+                if (btn) {
+                    const slide = btn.closest('.swiper-slide');
+                    if (slide) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        openDetailsModal(slide);
+                    }
+                }
+            });
+
+            document.getElementById('swiper-wrapper').addEventListener('click', function(e) {
+                const btn = e.target.closest('.remove-btn');
+                if (btn) {
+                    const slide = btn.closest('.swiper-slide');
+                    if (slide) {
+                        e.stopPropagation();
+                        removeSlide(slide);
+                    }
+                }
+            });
+
+            // Keyboard: Tab trap inside modals
+            function trapFocus(modalId) {
+                const modal = document.getElementById(modalId);
+                if (!modal) return;
+                modal.addEventListener('keydown', function(e) {
+                    if (e.key === 'Tab' && modal.classList.contains('active')) {
+                        const focusable = modal.querySelectorAll(
+                            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                        if (focusable.length === 0) return;
+                        const first = focusable[0];
+                        const last = focusable[focusable.length - 1];
+                        if (e.shiftKey && document.activeElement === first) {
+                            e.preventDefault();
+                            last.focus();
+                        } else if (!e.shiftKey && document.activeElement === last) {
+                            e.preventDefault();
+                            first.focus();
+                        }
+                    }
+                });
+            }
+
+            trapFocus('addModal');
+            trapFocus('detailsModal');
+
+            window.addEventListener('resize', function() {
+                updateCounter(swiper);
+            });
+
+            setTimeout(() => updateCounter(swiper), 100);
+        });
+    </script>
+</body>
+</html>
